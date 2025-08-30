@@ -74,24 +74,24 @@ document.addEventListener('DOMContentLoaded', function () {
         currentYearElement.textContent = new Date().getFullYear();
     }
 
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            const formData = new FormData(contactForm);
-            const name = formData.get('name');
-            const email = formData.get('email');
-            const message = formData.get('message');
+    // const contactForm = document.getElementById('contactForm');
+    // if (contactForm) {
+    //     contactForm.addEventListener('submit', function(e) {
+    //         e.preventDefault();
+    //         const formData = new FormData(contactForm);
+    //         const name = formData.get('name');
+    //         const email = formData.get('email');
+    //         const message = formData.get('message');
 
-            if (!name || !email || !message) {
-                alert('Please fill in all fields.');
-                return;
-            }
+    //         if (!name || !email || !message) {
+    //             alert('Please fill in all fields.');
+    //             return;
+    //         }
 
-            console.log('Form submitted with:', { name, email, message });
-            alert('Thank you for your message! (This is a simulation. Please integrate with a backend service for real submissions.)');
-            contactForm.reset();
-        });
-    }
+    //         console.log('Form submitted with:', { name, email, message });
+    //         alert('Thank you for your message! (This is a simulation. Please integrate with a backend service for real submissions.)');
+    //         contactForm.reset();
+    //     });
+    // }
 
 });
